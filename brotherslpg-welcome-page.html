@@ -1,0 +1,903 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brothers Liquefied Petroleum Gas Limited — Fuel is Future</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --navy-deep: #0f1e28;
+        --navy: #152c3a;
+        --slate: #22475a;
+        --logo-navy: #3f4d68;
+        --gold: #c9a24b;
+        --gold-soft: #e0bc74;
+        --teal: #2f93ac;
+        --paper: #f6f4ee;
+        --ink: #0f1e28;
+        --grey: #5c7183;
+        --line: rgba(246, 244, 238, 0.14);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+        line-height: 1.55;
+        -webkit-font-smoothing: antialiased;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "Playfair Display", "Inter", serif;
+        margin: 0;
+        letter-spacing: -0.01em;
+      }
+      a {
+        color: inherit;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      .wrap {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 0 32px;
+      }
+
+      /* ---------- LOGO LOCKUP ---------- */
+      .logo-lockup {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .logo-lockup svg {
+        flex: none;
+      }
+      .logo-text {
+        font-family: "Playfair Display", serif;
+      }
+      .logo-text .name {
+        display: block;
+        font-weight: 700;
+        font-size: 18px;
+        letter-spacing: 0.01em;
+        color: var(--paper);
+      }
+      .logo-text .tagline {
+        display: block;
+        font-size: 11px;
+        font-style: italic;
+        color: var(--gold-soft);
+        margin-top: 2px;
+        letter-spacing: 0.02em;
+      }
+      footer .logo-text .name {
+        color: var(--paper);
+      }
+
+      /* ---------- HERO ---------- */
+      .hero {
+        position: relative;
+        background:
+          radial-gradient(
+            1100px 520px at 82% -10%,
+            rgba(201, 162, 75, 0.16),
+            transparent 60%
+          ),
+          linear-gradient(180deg, var(--navy-deep) 0%, var(--navy) 100%);
+        color: var(--paper);
+        overflow: hidden;
+      }
+      .hero-grid {
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(var(--line) 1px, transparent 1px),
+          linear-gradient(90deg, var(--line) 1px, transparent 1px);
+        background-size: 64px 64px;
+        mask-image: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.9),
+          transparent 85%
+        );
+        pointer-events: none;
+      }
+      .hero-inner {
+        position: relative;
+        padding: 60px 32px 76px;
+        max-width: 1120px;
+        margin: 0 auto;
+      }
+      .brandrow {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 56px;
+      }
+      .since {
+        font-size: 13px;
+        color: rgba(246, 244, 238, 0.6);
+        border: 1px solid var(--line);
+        padding: 7px 14px;
+        border-radius: 999px;
+        white-space: nowrap;
+      }
+      .license-strip {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--gold-soft);
+        background: rgba(201, 162, 75, 0.1);
+        border: 1px solid rgba(201, 162, 75, 0.35);
+        padding: 9px 16px;
+        border-radius: 999px;
+        margin-bottom: 24px;
+      }
+      .hero-copy {
+        max-width: 720px;
+      }
+      .hero h1 {
+        font-size: clamp(32px, 4.8vw, 54px);
+        font-weight: 700;
+        line-height: 1.1;
+      }
+      .hero h1 em {
+        font-style: normal;
+        color: var(--gold);
+      }
+      .hero p.lede {
+        margin-top: 20px;
+        font-size: 17px;
+        max-width: 520px;
+        color: rgba(246, 244, 238, 0.78);
+      }
+      .hero-cta {
+        margin-top: 32px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        align-items: center;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 13px 24px;
+        border-radius: 8px;
+        font-size: 15px;
+        font-weight: 600;
+        text-decoration: none;
+        border: 1px solid transparent;
+      }
+      .btn-gold {
+        background: var(--gold);
+        color: var(--navy-deep);
+      }
+      .btn-ghost {
+        border-color: var(--line);
+        color: var(--paper);
+      }
+      .hero-meta {
+        margin-top: 22px;
+        font-size: 13.5px;
+        color: rgba(246, 244, 238, 0.55);
+      }
+
+      /* ---------- STAT STRIP ---------- */
+      .stats {
+        background: var(--slate);
+        color: var(--paper);
+      }
+      .stats-row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .stat {
+        padding: 26px 26px;
+        border-right: 1px solid var(--line);
+      }
+      .stat:last-child {
+        border-right: none;
+      }
+      .stat .num {
+        font-family: "Playfair Display", serif;
+        font-size: 27px;
+        font-weight: 700;
+        color: var(--gold-soft);
+      }
+      .stat .lbl {
+        font-size: 13px;
+        color: rgba(246, 244, 238, 0.72);
+        margin-top: 4px;
+      }
+
+      /* ---------- SECTION generic ---------- */
+      section.block {
+        padding: 60px 0;
+      }
+      .kicker {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--teal);
+        margin-bottom: 8px;
+      }
+      .block h2 {
+        font-size: clamp(22px, 2.8vw, 29px);
+        font-weight: 700;
+        max-width: 600px;
+      }
+
+      /* ---------- ABOUT ---------- */
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 48px;
+        margin-top: 28px;
+        align-items: start;
+      }
+      .about-grid p {
+        color: var(--grey);
+        font-size: 15.5px;
+        max-width: 52ch;
+      }
+      .vm-card {
+        background: var(--navy);
+        color: var(--paper);
+        border-radius: 12px;
+        padding: 20px 22px;
+        margin-bottom: 14px;
+      }
+      .vm-card:last-child {
+        margin-bottom: 0;
+      }
+      .vm-card h3 {
+        font-size: 14.5px;
+        color: var(--gold-soft);
+        margin-bottom: 6px;
+        font-weight: 700;
+      }
+      .vm-card p {
+        color: rgba(246, 244, 238, 0.82);
+        font-size: 14px;
+        margin: 0;
+      }
+
+      /* ---------- SERVICES ---------- */
+      .services {
+        background: var(--navy-deep);
+        color: var(--paper);
+      }
+      .services .kicker {
+        color: var(--gold-soft);
+      }
+      .services h2 {
+        color: var(--paper);
+      }
+      .svc-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+        background: var(--line);
+        margin-top: 30px;
+        border-radius: 14px;
+        overflow: hidden;
+      }
+      .svc {
+        background: var(--navy-deep);
+        padding: 24px 22px;
+      }
+      .svc svg {
+        margin-bottom: 12px;
+      }
+      .svc h3 {
+        font-size: 15.5px;
+        font-weight: 700;
+        margin-bottom: 5px;
+      }
+      .svc p {
+        font-size: 13.5px;
+        color: rgba(246, 244, 238, 0.65);
+        margin: 0;
+      }
+
+      /* ---------- INDUSTRIES ---------- */
+      .industries-inner {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 22px;
+      }
+      .chip {
+        padding: 9px 16px;
+        border: 1px solid rgba(15, 30, 40, 0.16);
+        border-radius: 999px;
+        font-size: 14px;
+        color: var(--navy);
+      }
+
+      /* ---------- TRUST / CLIENTS ---------- */
+      .trust {
+        background: var(--paper);
+      }
+      .client-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 12px;
+        margin-top: 24px;
+      }
+      .client-pill {
+        font-size: 13.5px;
+        color: var(--grey);
+        padding: 8px 15px;
+        background: #eceae1;
+        border-radius: 8px;
+      }
+      .quote-card {
+        margin-top: 32px;
+        background: var(--navy);
+        color: var(--paper);
+        border-radius: 14px;
+        padding: 28px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 28px;
+      }
+      .quote-card blockquote {
+        margin: 0;
+        font-size: 15px;
+        line-height: 1.55;
+        color: rgba(246, 244, 238, 0.92);
+      }
+      .quote-card cite {
+        display: block;
+        margin-top: 12px;
+        font-style: normal;
+        font-size: 13px;
+        color: var(--gold-soft);
+      }
+      .quote-card .divider {
+        border-left: 1px solid var(--line);
+        padding-left: 28px;
+      }
+
+      /* ---------- FOOTER / CONTACT ---------- */
+      footer {
+        background: var(--navy-deep);
+        color: var(--paper);
+      }
+      .foot-inner {
+        padding: 52px 0 32px;
+        display: grid;
+        grid-template-columns: 1.2fr 1fr 1fr;
+        gap: 36px;
+      }
+      .foot-brand p {
+        margin-top: 14px;
+        color: rgba(246, 244, 238, 0.62);
+        font-size: 14px;
+        max-width: 36ch;
+      }
+      footer h4 {
+        font-size: 12.5px;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--gold-soft);
+        font-weight: 700;
+        margin-bottom: 12px;
+      }
+      footer .field {
+        font-size: 14px;
+        color: rgba(246, 244, 238, 0.82);
+        margin-bottom: 9px;
+      }
+      footer .field span {
+        display: block;
+        font-size: 12px;
+        color: rgba(246, 244, 238, 0.45);
+        margin-bottom: 2px;
+      }
+      .foot-bottom {
+        border-top: 1px solid var(--line);
+        padding: 20px 0;
+        font-size: 13px;
+        color: rgba(246, 244, 238, 0.45);
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      @media (max-width: 860px) {
+        .about-grid {
+          grid-template-columns: 1fr;
+        }
+        .svc-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .stats-row {
+          grid-template-columns: 1fr 1fr;
+        }
+        .stat {
+          border-bottom: 1px solid var(--line);
+        }
+        .quote-card {
+          grid-template-columns: 1fr;
+        }
+        .quote-card .divider {
+          border-left: none;
+          border-top: 1px solid var(--line);
+          padding-left: 0;
+          padding-top: 20px;
+        }
+        .foot-inner {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 768px) {
+        .brandrow {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 12px;
+        }
+        .logo-lockup img {
+          width: 100% !important;
+          max-width: 400px;
+          height: auto !important;
+        }
+        .since {
+          font-size: 12px;
+          padding: 6px 12px;
+        }
+        .hero-inner {
+          padding: 40px 20px 60px;
+        }
+        .hero h1 {
+          font-size: 28px;
+        }
+        .hero p.lede {
+          font-size: 15px;
+        }
+        .hero-cta {
+          flex-direction: column;
+          align-items: stretch;
+        }
+        .btn {
+          justify-content: center;
+        }
+        .license-strip {
+          font-size: 12px;
+          padding: 8px 14px;
+          flex-wrap: wrap;
+        }
+        .hero-meta {
+          font-size: 12px;
+        }
+      }
+      @media (max-width: 560px) {
+        .svc-grid {
+          grid-template-columns: 1fr;
+        }
+        .wrap,
+        .hero-inner {
+          padding-left: 16px;
+          padding-right: 16px;
+        }
+        .logo-lockup img {
+          max-width: 300px;
+        }
+        .brandrow {
+          margin-bottom: 32px;
+        }
+        .hero h1 {
+          font-size: 24px;
+        }
+        .hero p.lede {
+          font-size: 14px;
+        }
+        .hero-copy {
+          max-width: 100%;
+        }
+        .hero-cta {
+          gap: 10px;
+        }
+        .btn {
+          padding: 12px 20px;
+          font-size: 14px;
+        }
+        .stats-row {
+          grid-template-columns: 1fr;
+        }
+        .stat {
+          border-right: none;
+          border-bottom: 1px solid var(--line);
+        }
+        .stat:last-child {
+          border-bottom: none;
+        }
+        .kicker {
+          font-size: 12px;
+        }
+        .block h2 {
+          font-size: 20px;
+        }
+        .about-grid {
+          gap: 32px;
+        }
+        .vm-card {
+          padding: 16px 18px;
+        }
+        .svc {
+          padding: 20px 18px;
+        }
+        .industries-inner {
+          gap: 8px;
+        }
+        .chip {
+          font-size: 13px;
+          padding: 8px 14px;
+        }
+        .client-row {
+          gap: 8px 10px;
+        }
+        .client-pill {
+          font-size: 12px;
+          padding: 7px 12px;
+        }
+        .quote-card {
+          padding: 20px;
+          gap: 20px;
+        }
+        .quote-card blockquote {
+          font-size: 14px;
+        }
+        .quote-card cite {
+          font-size: 12px;
+        }
+        .foot-inner {
+          padding: 40px 0 24px;
+          gap: 28px;
+        }
+        footer .field {
+          font-size: 13px;
+        }
+        .foot-bottom {
+          font-size: 12px;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+      @media (max-width: 400px) {
+        .logo-lockup img {
+          max-width: 250px;
+        }
+        .hero-inner {
+          padding: 32px 16px 48px;
+        }
+        .hero h1 {
+          font-size: 22px;
+        }
+        .license-strip {
+          font-size: 11px;
+          padding: 7px 12px;
+        }
+        .since {
+          font-size: 11px;
+          padding: 5px 10px;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+      }
+      :focus-visible {
+        outline: 2px solid var(--gold);
+        outline-offset: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero">
+      <div class="hero-grid"></div>
+      <div class="hero-inner">
+        <div class="brandrow">
+          <div class="logo-lockup">
+            <img
+              src="./assets/logo.png"
+              alt="Brothers LPG Limited"
+              style="max-width: 500px; width: 100%; height: auto"
+            />
+          </div>
+          <div class="since">Serving Bangladesh since 2017</div>
+        </div>
+
+        <div class="license-strip">
+          BERC-licensed LPG Operator · Importer &amp; Exporter of LPG, LNG,
+          EN590 &amp; Jet A1
+        </div>
+
+        <div class="hero-copy">
+          <h1>Reliable energy, <em>delivered</em> without interruption.</h1>
+          <p class="lede">
+            Turnkey LPG systems and energy trading for industry, commerce and
+            homes across Bangladesh.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-gold" href="#contact">Talk to our team</a>
+            <a class="btn btn-ghost" href="#services">See what we build</a>
+          </div>
+          <p class="hero-meta">
+            Jahangir Tower, 10 Kawran Bazar, Dhaka 1215 · +88 01790 342143
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="wrap stats-row">
+        <div class="stat">
+          <div class="num">20+</div>
+          <div class="lbl">Installations nationwide</div>
+        </div>
+        <div class="stat">
+          <div class="num">2017</div>
+          <div class="lbl">Pioneering reticulated LPG</div>
+        </div>
+        <div class="stat">
+          <div class="num">24/7</div>
+          <div class="lbl">Engineering support</div>
+        </div>
+        <div class="stat">
+          <div class="num">BERC</div>
+          <div class="lbl">Licensed operator, importer &amp; exporter</div>
+        </div>
+      </div>
+    </div>
+
+    <section class="block" id="about">
+      <div class="wrap about-grid">
+        <div>
+          <div class="kicker">About us</div>
+          <h2>A one-stop LPG and energy solutions partner.</h2>
+          <p>
+            Since 2017, Brothers LPG has pioneered modern reticulated systems in
+            Bangladesh, expanding into textiles, ceramics, construction and
+            international energy trading. One integrated model, from bulk supply
+            to the burner tip.
+          </p>
+        </div>
+        <div>
+          <div class="vm-card">
+            <h3>Our vision</h3>
+            <p>
+              Clean, portable energy innovation for a sustainable Bangladesh.
+            </p>
+          </div>
+          <div class="vm-card">
+            <h3>Our mission</h3>
+            <p>
+              LPG utilisation in every sector, delivered safely and efficiently.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services block" id="services">
+      <div class="wrap">
+        <div class="kicker">What we build</div>
+        <h2>Turnkey LPG systems, start to finish.</h2>
+        <div class="svc-grid">
+          <div class="svc">
+            <svg
+              width="26"
+              height="26"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#c9a24b"
+              stroke-width="1.6"
+            >
+              <rect x="4" y="9" width="16" height="8" rx="2" />
+              <path d="M8 9V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v3" />
+            </svg>
+            <h3>Storage tank systems</h3>
+            <p>
+              Engineered bulk storage to national and international safety
+              codes.
+            </p>
+          </div>
+          <div class="svc">
+            <svg
+              width="26"
+              height="26"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#c9a24b"
+              stroke-width="1.6"
+            >
+              <rect x="2" y="8" width="12" height="7" rx="1" />
+              <path d="M14 10h4l3 3v2h-7z" />
+              <circle cx="6" cy="17" r="1.6" />
+              <circle cx="17" cy="17" r="1.6" />
+            </svg>
+            <h3>Road tankers</h3>
+            <p>Metered 12–18 tonne tankers, hydrostatically tested.</p>
+          </div>
+          <div class="svc">
+            <svg
+              width="26"
+              height="26"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#c9a24b"
+              stroke-width="1.6"
+            >
+              <path d="M6 20V9l6-5 6 5v11" />
+              <path d="M10 20v-6h4v6" />
+            </svg>
+            <h3>Reticulated systems</h3>
+            <p>Piped, metered LPG for apartments and commercial kitchens.</p>
+          </div>
+          <div class="svc">
+            <svg
+              width="26"
+              height="26"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#c9a24b"
+              stroke-width="1.6"
+            >
+              <circle cx="12" cy="12" r="8" />
+              <path d="M12 8v4l3 2" />
+            </svg>
+            <h3>Vaporizing &amp; regulating units</h3>
+            <p>Stable vapour supply, even at low temperatures.</p>
+          </div>
+          <div class="svc">
+            <svg
+              width="26"
+              height="26"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#c9a24b"
+              stroke-width="1.6"
+            >
+              <rect x="3" y="4" width="18" height="16" rx="2" />
+              <path d="M7 9h10M7 13h6" />
+            </svg>
+            <h3>Autogas stations</h3>
+            <p>Tank, dispenser and control panel, fully installed.</p>
+          </div>
+          <div class="svc">
+            <svg
+              width="26"
+              height="26"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#c9a24b"
+              stroke-width="1.6"
+            >
+              <path d="M4 12h4l2-6 4 12 2-6h4" />
+            </svg>
+            <h3>Energy trading</h3>
+            <p>LNG, LPG, coal and EN590 import, export &amp; procurement.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="industries">
+      <div class="wrap">
+        <div class="kicker">Industries we serve</div>
+        <h2>Heavy industry to the household kitchen.</h2>
+        <div class="industries-inner">
+          <span class="chip">Garments &amp; knitwear</span>
+          <span class="chip">Textile &amp; dyeing</span>
+          <span class="chip">Ceramics</span>
+          <span class="chip">Asphalt &amp; construction</span>
+          <span class="chip">Metal &amp; aluminium</span>
+          <span class="chip">Restaurants</span>
+          <span class="chip">Residential apartments</span>
+          <span class="chip">Government projects</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="block trust">
+      <div class="wrap">
+        <div class="kicker">Trusted by</div>
+        <h2>Clients who run on our supply.</h2>
+        <div class="client-row">
+          <span class="client-pill">Tushar Ceramics</span>
+          <span class="client-pill">Paramount Textile</span>
+          <span class="client-pill">Pakiza Group</span>
+          <span class="client-pill">Fakir Apparels</span>
+          <span class="client-pill">Snowtex</span>
+          <span class="client-pill">DECO</span>
+          <span class="client-pill">Omera LPG</span>
+          <span class="client-pill">AB Ceramics</span>
+          <span class="client-pill">Sanita Ceramics</span>
+        </div>
+        <div class="quote-card">
+          <blockquote>
+            “Their turnkey solution has run smoothly for four years — the
+            engineering team is efficient and safety-focused.”
+            <cite>Engr. Moklesur Rahman — Chairman, Tushar Ceramics Ltd.</cite>
+          </blockquote>
+          <div class="divider">
+            <blockquote>
+              “Best quality at the best price, and made switching from diesel to
+              LPG simple. Service has been exceptional.”
+              <cite
+                >Shakhawat Hossain — Managing Director, Paramount Textile
+                Ltd.</cite
+              >
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contact">
+      <div class="wrap foot-inner">
+        <div class="foot-brand">
+          <div class="logo-lockup">
+            <img
+              src="./assets/logo.png"
+              alt="Brothers LPG Limited"
+              style="max-width: 300px; width: 100%; height: auto"
+            />
+          </div>
+          <p>
+            One-stop LPG distribution and engineering partner, pioneering
+            Bangladesh's reticulated system since 2017.
+          </p>
+        </div>
+        <div>
+          <h4>Get in touch</h4>
+          <div class="field"><span>Phone</span>+88 01790 342143</div>
+          <div class="field"><span>Office IP</span>+8809647014273</div>
+          <div class="field"><span>Email</span>md@brotherslpg.com</div>
+          <div class="field"><span>Web</span>www.brotherslpg.com</div>
+        </div>
+        <div>
+          <h4>Offices</h4>
+          <div class="field">
+            <span>Head Office</span>Jahangir Tower, 6th Floor, 10 Kawran Bazar,
+            Dhaka 1215
+          </div>
+          <div class="field">
+            <span>China Office</span>Room A1401, #2–12 Gangwan St., Zhongshan
+            Dist., Dalian City, Liaoning
+          </div>
+        </div>
+      </div>
+      <div class="wrap foot-bottom">
+        <span>&copy; Brothers Liquefied Petroleum Gas Limited.</span>
+        <span>Clean fuel · Perfect weight · Maximum safety</span>
+      </div>
+    </footer>
+  </body>
+</html>
